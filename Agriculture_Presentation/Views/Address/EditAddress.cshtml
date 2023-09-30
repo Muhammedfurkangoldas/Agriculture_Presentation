@@ -1,0 +1,46 @@
+﻿@model EntityLayer.Concrete.Address
+@{
+    ViewData["Title"] = "EditAddress";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Adres Bilgi Güncelleme Sayfası</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    @Html.HiddenFor(x => x.AddressID)
+
+                    <label for="exampleInputName1">Adres Bilgisi 1</label>
+                    <span asp-validation-for="Description1" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Adres Bilgisi 1" asp-for="Description1">
+                    <br />
+
+                    <label for="exampleInputName1">Adres Bilgisi 2</label>
+                    <span asp-validation-for="Description2" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Adres Bilgisi 2" asp-for="Description2">
+                    <br />
+
+                    <label for="exampleInputName1">Adres Bilgisi 3</label>
+                    <span asp-validation-for="Description3" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Adres Bilgisi 3" asp-for="Description3">
+                    <br />
+
+                    <label for="exampleInputName1">Adres Bilgisi 4</label>
+                    <span asp-validation-for="Description4" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Adres Bilgisi 4" asp-for="Description4">
+                    <br />
+
+                    <label for="exampleInputName1">Konum</label>
+                    <span asp-validation-for="Mapinfo" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Konum Bilgileri" asp-for="Mapinfo">
+                    <br />
+                </div>                
+                <button type="submit" class="btn btn-outline-primary me-2">Kaydet</button>
+                <button class="btn btn-light">Değişikliklerden Vazgeç</button>
+            </form>
+        </div>
+    </div>
+</div>
+
